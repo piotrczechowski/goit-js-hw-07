@@ -24,3 +24,19 @@ background-color: #4E75FF; /* Initial background color */
  width: 86px;
  height: 40px;
 }
+
+button:hover {
+  background: #6C8CFF;
+
+}
+
+button.task-6 {
+
+  background: #FF4E4E;
+
+}
+
+button.task-6:hover {
+  background: #FF7070;
+
+}
