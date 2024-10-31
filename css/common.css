@@ -12,3 +12,14 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+
+button {
+
+background-color: #3498db; /* Initial background color */
+  color: white; /* Initial text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
