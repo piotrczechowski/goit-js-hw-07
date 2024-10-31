@@ -3,48 +3,39 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-
-
-
-
-
-// Function to create a collection of boxes
+const createButton = document.querySelector('[data-create]');
+const destroyButton = document.querySelector('[data-destroy]');
+const input = document.querySelector('#controls input');
 function createBoxes(amount) {
-  boxesContainer.innerHTML = ''; // Clear existing content
+    const boxesContainer = document.getElementById('boxes');
+    boxesContainer.innerHTML = ''; 
 
-
-
-  for (let i = 0; i < amount; i++) {
-    const box = document.createElement('div');
-    box.style.width = `${size}px`;
-    box.style.height = `${size}px`;
-    box.style.backgroundColor = getRandomHexColor();
-    box.style.margin = '5px'; // Space between boxes
-    size += 10; // Increase size for the next box
-    box.classList.add('box');
-    fragment.appendChild(box);
-  }
-
-  boxesContainer.appendChild(fragment); 
+    for (let i = 0; i < amount; i++) {
+        const size = 30 + i * 10; 
+        const box = document.createElement('div');
+        box.style.width = `${size}px`;
+        box.style.height = `${size}px`;
+        box.style.backgroundColor = getRandomHexColor();
+        box.classList.add('box');
+        boxesContainer.appendChild(box); 
+    }
 }
 
-// Function to clear all boxes
 function destroyBoxes() {
-  boxesContainer.innerHTML = ''; // Clear container content
+    const boxesContainer = document.getElementById('boxes');
+    boxesContainer.innerHTML = '';
 }
 
-// Event listener for the create button
-createButton.addEventListener('click', () => {
-  const amount = parseInt(input.value, 10);
 
-  // Validate the input value is between 1 and 100
-  if (amount >= 1 && amount <= 100) {
-    createBoxes(amount);
-    input.value = ''; // Clear input after creating boxes
-  } else {
-    alert('Please enter a number between 1 and 100.');
-  }
+
+createButton.addEventListener('click', () => {
+    const amount = Number(input.value);
+    if (amount >= 1 && amount <= 100) {
+        createBoxes(amount);
+        input.value = '';
+    } else {
+        alert('Please enter a number between 1 and 100.');
+    }
 });
 
-// Event listener for the destroy button
 destroyButton.addEventListener('click', destroyBoxes);
