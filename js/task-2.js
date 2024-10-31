@@ -36,5 +36,5 @@ document.querySelector('.gallery').style.listStyle = 'none';
 document.querySelectorAll('.gallery-image').forEach(img => {
   img.style.width = '100%';
   img.style.height = 'auto';
-  img.style.maxWidth = '300px'; // adjust as needed
+  img.style.maxWidth = '300px';
 });
