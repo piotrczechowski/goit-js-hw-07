@@ -65,3 +65,20 @@ button.task-6:hover {
  
   
 }
+
+li {
+  background-color: #F6F6FE; /* White background */
+    border: 1px solid #d1d1e0; /* Light gray border */
+    border-radius: 6px; /* Rounded corners */
+    padding: 10px 15px;
+    font-size: 18px;
+    margin-bottom: 10px; /* Space between items */
+    cursor: pointer;
+    transition: background-color 0.2s;
+    
+
+}
+
+ul {
+  list-style: none;
+}
