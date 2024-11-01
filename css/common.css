@@ -83,7 +83,7 @@ ul {
   list-style: none;
 }
 
-.gallery-item {
+li.gallery-item {
   background-color: #fff;
   border: none;
   
